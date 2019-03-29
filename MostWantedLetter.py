@@ -35,7 +35,7 @@ def checkio(text: str) -> str:
     # создаю словарь на основе списка
     my_dict = dict.fromkeys(text_list)
 
-    # считаю количнство каждой буквы в заданной строке
+    # считаю количество каждой буквы в заданной строке
     for key in text:
         my_dict[key] = text.count(key)
 
