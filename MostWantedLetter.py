@@ -20,29 +20,29 @@ A text contains only ASCII symbols.
 
 
 def checkio(text: str) -> str:
-    # перевод строки в нижний регистр
+    # Перевод строки в нижний регистр
     text = text.lower()
-    # недопустимые символы '!? ,-'
+    # Недопустимые символы '!? ,-'
     text = text.replace('!', '').replace("?", '').replace(" ", '').replace("-", "").replace(',', '')
-    # убираю из строки цифры
+    # Убираю из строки цифры
     text = ''.join([i for i in text if not i.isdigit()])
 
-    # перевожу строку в список
+    # Перевожу строку в список
     text_list = []
     for i in text:
         text_list.append(i)
 
-    # создаю словарь на основе списка
+    # Создаю словарь на основе списка
     my_dict = dict.fromkeys(text_list)
 
-    # считаю количество каждой буквы в заданной строке
+    # Считаю количество каждой буквы в заданной строке
     for key in text:
         my_dict[key] = text.count(key)
 
-    # нахожу букву с самым большм числом совпадений
+    # Нахожу букву с самым большм числом совпадений
     max_val = max(my_dict.values())
 
-    # создаю словарь с max значениями, если max значений несколько
+    # Создаю словарь с max значениями, если max значений несколько
     # он нужен для дальнейшей сортировки
     max_dict = {}
     for key, value in my_dict.items():
