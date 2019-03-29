@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 '''
 Задание:
 The function should recognise if a subject line is stressful. A stressful subject line means that all letters
