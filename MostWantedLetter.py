@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 '''
 Задание
 You are given a text, which contains different english letters and punctuation symbols. You should find the most
@@ -38,10 +39,11 @@ def checkio(text: str) -> str:
     for key in text:
         my_dict[key] = text.count(key)
 
-    # нахожу максимальное значение в словаре
+    # нахожу букву с самым большм числом совпадений
     max_val = max(my_dict.values())
 
-    # создаю словарь с max значениями
+    # создаю словарь с max значениями, если max значений несколько
+    # он нужен для дальнейшей сортировки
     max_dict = {}
     for key, value in my_dict.items():
         if value == max_val:
